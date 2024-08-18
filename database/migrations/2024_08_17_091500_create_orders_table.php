@@ -17,9 +17,9 @@ return new class extends Migration
             $table->foreignId('reservation_id')->constrained('reservations');
             $table->foreignId('customer_id')->constrained('customers');
             $table->foreignId('user_id')->constrained('users');
-            $table->decimal('total');
-            $table->boolean('paid');
-            $table->date('date');
+            $table->decimal('total')->nullable();
+            $table->boolean('paid')->nullable();
+            $table->date('date')->nullable();
             $table->timestamps();
         });
     }

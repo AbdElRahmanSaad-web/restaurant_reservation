@@ -14,4 +14,11 @@ class Reservation extends Model
     public function orders(){
         return $this->hasMany(Order::class);
     }
+
+    public function customer(){
+        return $this->belongsTo(Customer::class);
+    }
+    public function table(){
+        return $this->belongsTo(Table::class);
+    }
 }
